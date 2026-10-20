@@ -5,6 +5,8 @@ import weather from "../../images/weather.webp";
 import girl from "../../images/Leonardo_Diffusion_girlcat_with_headphones_and_laptop_digital_2.webp";
 import taskBg from "../../images/Default_background_image_for_website_dark_colors_digital_lapto_0_2cefb854-032c-47e6-b827-5bee2040b37f_1.webp";
 
+const taskFlowScreenshot = "https://github.com/user-attachments/assets/7a4b6026-4c59-4898-a4a6-e92d69d7bbe0";
+
 export const ProjectsBox = styled.main`
   min-height: 100vh;
   position: relative;
@@ -99,7 +101,7 @@ export const FeaturedImage = styled.div`
   border-radius: 11px;
   background:
     linear-gradient(180deg, rgba(4, 12, 24, 0.04), rgba(4, 12, 24, 0.32)),
-    url(${taskBg}) center / cover no-repeat;
+    url(${taskFlowScreenshot}) center / cover no-repeat;
   border: 1px solid rgba(74, 166, 255, 0.2);
   box-shadow: inset 0 0 28px rgba(0, 193, 255, 0.04);
 `;
@@ -300,8 +302,11 @@ export const ProjectImage = styled.div(({ variant }) => ({
         ? weather
         : variant === "portfolio"
           ? girl
-          : taskBg) +
+          : variant === "phonebook"
+            ? "none"
+            : taskBg) +
     ")",
+  backgroundColor: variant === "phonebook" ? "#f5e7dc" : "#071527",
   backgroundPosition: "center",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
