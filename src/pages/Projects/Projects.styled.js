@@ -294,8 +294,9 @@ export const ProjectCard = styled.article`
 
 export const ProjectImage = styled.div(({ variant }) => ({
   height: "175px",
-  backgroundImage:
-    "linear-gradient(180deg, rgba(3, 11, 22, 0.04), rgba(3, 11, 22, 0.18)), url(" +
+  backgroundImage: variant === "phonebook"
+    ? "linear-gradient(180deg, #f7e46d 0%, #f7e46d 28%, #f7eee9 29%, #f2cfaa 100%)"
+    : "linear-gradient(180deg, rgba(3, 11, 22, 0.04), rgba(3, 11, 22, 0.18)), url(" +
     (variant === "petly"
       ? petly
       : variant === "weather"
@@ -307,6 +308,7 @@ export const ProjectImage = styled.div(({ variant }) => ({
             : taskBg) +
     ")",
   backgroundColor: variant === "phonebook" ? "#f5e7dc" : "#071527",
+
   backgroundPosition: "center",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
