@@ -40,17 +40,10 @@ const projects = [
     backend: "https://github.com/yanakhorolska/pets_back-end",
   },
   {
-    title: "Weekendly",
-    description: "React and TypeScript app for organizing saved places, with place details, state management, a mock API and a tested component architecture.",
-    image: "weekendly",
-    featured: true,
-    tags: ["React", "TypeScript", "Redux Toolkit", "Vite", "Vitest"],
-    github: "https://github.com/yanakhorolska/Weekendly-App",
-  },
-  {
     title: "Phonebook",
     description: "React contacts application showcasing authenticated navigation, Redux Toolkit state management and API integration.",
-    image: "portfolio",
+    image: "phonebook",
+    demo: "https://goit-react-hw-08-phonebook-five.vercel.app/",
     tags: ["React", "Redux Toolkit", "React Router", "Axios", "Material UI"],
     github: "https://github.com/yanakhorolska/phonebook",
   },
@@ -70,13 +63,6 @@ const projects = [
     demo: "https://me-two-phi.vercel.app/",
     github: "https://github.com/yanakhorolska/my-profile",
   },
-  {
-    title: "DevApply — In Progress",
-    description: "An early-stage job application tracker. The repository currently contains the React/TypeScript client setup, an Express server scaffold and the product specification.",
-    image: "weekendly",
-    tags: ["React", "TypeScript", "Express", "Work in progress"],
-    github: "https://github.com/yanakhorolska/DevApply-Job-Application-Tracker",
-  },
 ];
 
 export const Projects = () => {
@@ -88,7 +74,7 @@ export const Projects = () => {
             <Eyebrow>Portfolio</Eyebrow>
             <PageTitle>My <Accent>Projects</Accent></PageTitle>
             <Intro>
-              Selected projects I&apos;ve built while learning and growing as a front-end and full-stack developer.
+              A selection of completed full-stack and frontend work, including an individual application and a collaborative team project.
             </Intro>
 
             <FeaturedCard>
@@ -98,21 +84,21 @@ export const Projects = () => {
                 <ProjectTitle>TaskFlow</ProjectTitle>
                 <ProjectSubtitle>Full-Stack Productivity App</ProjectSubtitle>
                 <ProjectText>
-                  A task management application for organizing daily work, tracking progress,
-                  and practicing modern Angular architecture.
+                  A full-stack productivity app with secure accounts, tasks, goals and wishlists, built with Angular, Express and PostgreSQL.
                 </ProjectText>
                 <Tags>
-                  {["Angular", "TypeScript", "RxJS", "Signals", "SCSS", "REST API"].map((tag) => <Tag key={tag}>{tag}</Tag>)}
+                  {["Angular", "TypeScript", "Express", "PostgreSQL", "RxJS", "JWT"].map((tag) => <Tag key={tag}>{tag}</Tag>)}
                 </Tags>
                 <Actions>
-                  <PrimaryLink href="https://task-flow-dun-seven-81.vercel.app/" target="_blank" rel="noreferrer">Live Demo</PrimaryLink>\n                  <SecondaryLink href="https://github.com/yanakhorolska/task-flow" target="_blank" rel="noreferrer">GitHub</SecondaryLink>
+                  <PrimaryLink href="https://task-flow-dun-seven-81.vercel.app/" target="_blank" rel="noreferrer">Live Demo</PrimaryLink>
+                  <SecondaryLink href="https://github.com/yanakhorolska/task-flow" target="_blank" rel="noreferrer">GitHub</SecondaryLink>
                 </Actions>
               </FeaturedContent>
             </FeaturedCard>
 
             <SectionHeader>
               <SectionTitle>More Projects</SectionTitle>
-              <SectionNote>Exploring ideas, building solutions, and learning something new</SectionNote>
+              <SectionNote>Selected projects with source code and live demos</SectionNote>
             </SectionHeader>
 
             <ProjectsGrid>
@@ -127,7 +113,8 @@ export const Projects = () => {
                     </Tags>
                     <Actions>
                       {project.demo && <PrimaryLink href={project.demo} target="_blank" rel="noreferrer">Live Demo</PrimaryLink>}
-                      <SecondaryLink href={project.github} target="_blank" rel="noreferrer">{project.backend ? "Frontend" : "GitHub"}</SecondaryLink>\n                      {project.backend && <SecondaryLink href={project.backend} target="_blank" rel="noreferrer">Backend</SecondaryLink>}
+                      <SecondaryLink href={project.github} target="_blank" rel="noreferrer">{project.backend ? "Frontend" : "GitHub"}</SecondaryLink>
+                      {project.backend && <SecondaryLink href={project.backend} target="_blank" rel="noreferrer">Backend</SecondaryLink>}
                     </Actions>
                   </CardBody>
                 </ProjectCard>
