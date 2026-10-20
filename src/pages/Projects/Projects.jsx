@@ -106,7 +106,8 @@ export const Projects = () => {
                 <ProjectCard key={project.title}>
                   <ProjectImage variant={project.image} />
                   <CardBody>
-                    {project.featured && <Badge>Featured Project</Badge>}\n                    <ProjectTitle>{project.title}</ProjectTitle>
+                    {project.featured && <Badge>Featured Project</Badge>}
+                    <ProjectTitle>{project.title}</ProjectTitle>
                     <ProjectText>{project.description}</ProjectText>
                     <Tags>
                       {project.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
